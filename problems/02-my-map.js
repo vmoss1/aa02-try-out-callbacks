@@ -17,12 +17,22 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
 function myMap(array, cb) {
-    // Your code here 
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    let el = array[i];
+    let res = cb(el, i, array);
+    newArray.push(res);
+  }
+  return newArray;
 }
+
+let test = myMap([100, 25, 81, 64], Math.sqrt);
+
+console.log(test);
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
-    module.exports = myMap;
-} catch(e) {
-    return null;
+  module.exports = myMap;
+} catch (e) {
+  return null;
 }
