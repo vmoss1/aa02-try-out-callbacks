@@ -22,9 +22,14 @@ console.log(result3); // hi!!!!!
 *******************************************************************************/
 
 function multiMap(val, n, cb) {
-  // Your code here 
+let el = 10
+let result = n + cb(el);
+return result + val;
+
 }
 
+let test = multiMap('Dogs', 100 , function(el){return 10})
+console.log(test)
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = multiMap;
